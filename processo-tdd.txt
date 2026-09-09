@@ -1,0 +1,5 @@
+1. Escrever um teste que falha
+2. Fazer o teste passar com o mínimo de código possível
+3. Refatorar o código
+4. Executar os testes novamente
+5. Repetir o processo
