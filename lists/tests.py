@@ -26,7 +26,10 @@ class HomePageTest(TestCase):
         )
 
         self.assertEqual(response.status_code, 302)
-        self.assertEqual(response["location"], "/")
+        self.assertEqual(
+            response["location"],
+            "/lists/the-only-list-in-the-world/"
+        )
 
     def test_only_saves_items_when_necessary(self):
         self.client.get("/")
@@ -59,5 +62,11 @@ class ItemModelTest(TestCase):
         first_saved_item = saved_items[0]
         second_saved_item = saved_items[1]
 
-        self.assertEqual(first_saved_item.text, "O primeiro item")
-        self.assertEqual(second_saved_item.text, "O segundo item")
+        self.assertEqual(
+            first_saved_item.text,
+            "O primeiro item"
+        )
+        self.assertEqual(
+            second_saved_item.text,
+            "O segundo item"
+        )
